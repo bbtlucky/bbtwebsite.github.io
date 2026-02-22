@@ -13,7 +13,6 @@
 <meta name="author" content="Lakshay Sharma">
 
 <link rel="icon" href="favicon.ico" type="image/x-icon">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -25,13 +24,13 @@
 }
 
 body{
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'Segoe UI', sans-serif;
     background:#0f0f0f;
     color:white;
     overflow-x:hidden;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 header{
     background:#111;
     padding:20px 40px;
@@ -48,14 +47,12 @@ header{
     gap:15px;
 }
 
-/* LOGO */
 .logo{
     width:55px;
     height:55px;
     object-fit:contain;
 }
 
-/* TEXT BLOCK */
 .header-text{
     display:flex;
     flex-direction:column;
@@ -78,7 +75,7 @@ header h2{
     color:#777;
 }
 
-/* ===== SOCIAL ICONS ===== */
+/* SOCIAL ICONS */
 .social-icons{
     display:flex;
     gap:18px;
@@ -95,7 +92,7 @@ header h2{
     color:white;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 nav{
     background:#111;
     position:sticky;
@@ -126,7 +123,7 @@ nav{
     color:white;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
     position:relative;
     height:300px;
@@ -157,7 +154,7 @@ nav{
     padding:10px 20px;
 }
 
-/* ===== SECTION ===== */
+/* SECTION */
 section{
     padding:50px 20px;
     text-align:center;
@@ -170,7 +167,7 @@ section p{
     margin-bottom:30px;
 }
 
-/* ===== CARDS ===== */
+/* CARDS */
 .platforms{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -240,7 +237,17 @@ section p{
     opacity:1;
 }
 
-/* ===== FOOTER ===== */
+/* SECRET IMAGE */
+.secret-img img{
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.secret-img img:hover{
+    transform:scale(1.05);
+}
+
+/* FOOTER */
 footer{
     background:#111;
     padding:20px;
@@ -250,34 +257,89 @@ footer{
     border-top:1px solid #222;
 }
 
-/* ===== MOBILE ===== */
-@media(max-width:768px){
+/* MOBILE IMPROVEMENT */
+@media (max-width:768px){
 
     header{
         flex-direction:column;
         text-align:center;
-        gap:12px;
+        padding:15px;
+        gap:15px;
     }
 
-    header h1{
-        font-size:22px;
-    }
-
-    .hero{
-        height:220px;
-    }
-
-    .hero-text{
-        font-size:18px;
-    }
-
-    .navbar{
+    .header-left{
         flex-direction:column;
         gap:10px;
     }
 
+    .logo{
+        width:45px;
+        height:45px;
+    }
+
+    header h1{
+        font-size:20px;
+    }
+
+    header h2{
+        font-size:14px;
+    }
+
+    .owner{
+        font-size:12px;
+    }
+
+    .social-icons{
+        justify-content:center;
+        gap:15px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        align-items:center;
+        gap:8px;
+        padding:10px 0;
+    }
+
+    .navbar a{
+        display:block;
+        width:90%;
+        text-align:center;
+        padding:10px;
+        background:#1a1a1a;
+    }
+
+    .hero{
+        height:200px;
+    }
+
+    .hero-text{
+        font-size:16px;
+        padding:0 15px;
+    }
+
+    section{
+        padding:35px 15px;
+    }
+
+    section p{
+        font-size:14px;
+        line-height:1.6;
+    }
+
+    .platforms{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
     .card img{
-        height:240px;
+        height:220px;
+    }
+
+    .secret-img img{
+        width:80%;
+        height:auto;
+        margin-top:15px;
     }
 
 }
@@ -290,7 +352,6 @@ footer{
 <header>
 
 <div class="header-left">
-
     <img src="bbthub-logo.jpg" alt="BBT Hub Logo" class="logo">
 
     <div class="header-text">
@@ -298,35 +359,34 @@ footer{
         <h2>Animes / Web Series / Movies</h2>
         <div class="owner">Owner: Lakshay Sharma</div>
     </div>
-
 </div>
 
 <div class="social-icons">
-    <a href="https://www.instagram.com/lakshay_sharma24?igsh=ZzZ5cDVxbTNpYWVr"><i class="fab fa-instagram"></i></a>
-    <a href="https://snapchat.com/t/EYb5wAWL"><i class="fab fa-snapchat-ghost"></i></a>
-    <a href="https://www.facebook.com/share/1KW6jY3PWi/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/lakshay_sharma24"><i class="fab fa-instagram"></i></a>
+    <a href="https://snapchat.com"><i class="fab fa-snapchat-ghost"></i></a>
+    <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
 </div>
 
 </header>
 
 <nav>
-    <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="anime.html">Anime</a></li>
-        <li><a href="webSeries.html">Web Series</a></li>
-        <li><a href="movies.html">Movies</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-    </ul>
+<ul class="navbar">
+<li><a href="index.html">Home</a></li>
+<li><a href="anime.html">Anime</a></li>
+<li><a href="webSeries.html">Web Series</a></li>
+<li><a href="movies.html">Movies</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
 </nav>
 
 <div class="hero">
-    <video autoplay muted loop playsinline class="hero-video">
-        <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-text">
-        Unlimited Anime, Web Series & Movies Info
-    </div>
+<video autoplay muted loop playsinline class="hero-video">
+<source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+</video>
+<div class="hero-overlay"></div>
+<div class="hero-text">
+Unlimited Anime, Web Series & Movies Info
+</div>
 </div>
 
 <section>
@@ -359,7 +419,7 @@ Our website is a complete entertainment platform where users can explore detaile
 
 <a href="movies.html">
 <div class="card">
-<img src="https://cdn.dribbble.com/userupload/45465630/file/84fadb7a321b0d8bbf8c1a1082b2d526.png?format=webp&resize=400x300&vertical=center" alt="Movies Collection">
+<img src="https://cdn.dribbble.com/userupload/45465630/file/84fadb7a321b0d8bbf8c1a1082b2d526.png" alt="Movies Collection">
 <div class="rating">⭐ 9.0</div>
 <div class="play">▶</div>
 <div class="title">Movies</div>
@@ -367,8 +427,8 @@ Our website is a complete entertainment platform where users can explore detaile
 </a>
 
 </div>
-
 </section>
+
 <section>
 <h2>🔒 Discover Our Special Entertainment App</h2>
 
@@ -386,11 +446,11 @@ Click on image below to explore more about this exclusive feature.
 
 <a href="https://dooflixapk.com/">
 <div class="secret-img">
-<img src="https://play-lh.googleusercontent.com/QVUdImRSoHCt_MXH_qmuRW03yVPfKcAHu1ad_lszG9g9vRmCoPlD8W5Fusy1flGH6ZY"height="250" alt="Secret App">
+<img src="https://play-lh.googleusercontent.com/QVUdImRSoHCt_MXH_qmuRW03yVPfKcAHu1ad_lszG9g9vRmCoPlD8W5Fusy1flGH6ZY" height="250" alt="Secret App">
 </div>
 </a>
-</section>
 
+</section>
 
 <footer>
 © 2026 BBT Entertainment Hub | Designed by Lakshay Sharma
@@ -398,5 +458,3 @@ Click on image below to explore more about this exclusive feature.
 
 </body>
 </html>
-
-
